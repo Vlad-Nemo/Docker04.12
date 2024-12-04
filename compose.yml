@@ -1,0 +1,7 @@
+services:
+  node-app-server:
+    image: ghcr.io/vlad_nemo/docker04.12/node-app:latest
+    container_name: node
+    restart: unless-stopped
+    ports:
+      - 5050:5050
