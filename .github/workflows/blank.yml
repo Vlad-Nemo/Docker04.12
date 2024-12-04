@@ -30,3 +30,9 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build Docker
+        run: docker build -t ghcr.io/vlad_nemo/docker04.12/node-app:latest .
+
+      - name: Push Docker
+        run: docker push ghcr.io/vlad_nemo/docker04.12/node-app:latest 
